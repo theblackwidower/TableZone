@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--Name: Bhavya Patel
+Student ID: 110065852-->
+<html lang="en-us">
+<!--This is the head tag-->
+
+<head>
+    <!--It has all the meta, title, and attached style sheet-->
+    <meta charset="UTF-8">
+    <meta name="author" content="Bhavya Patel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0s" />
+    <title>Task 1</title>
+    <link rel="stylesheet" href="task1CSS.css">
+    <script src="task1.js"></script>
+</head>
+<!--This is the body part-->
+
+<body>
+
+    <!--This is for the overall form-->
+    <form id="overall">
+        <!--Password checkbox -->
+        <div id="message">
+            <h3>Password must contain the following:</h3>
+            <p id="letter" class="invalid">A <b>atleast one lowercase case letter</b> letter</p>
+            <p id="capital" class="invalid">A <b>atleast one upper case letter</b> letter</p>
+            <p id="number" class="invalid">A <b>atleast one digit</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            <p id="special" class="invalid">A <b>atleast one special character</b></p>
+        </div>
+
+
+        <!--This is for the whole form-->
+        <fieldset id="overall1">
+            <!--This is for the top part of the form-->
+            <fieldset class="head">
+                <p class="font1">Sign Up</p>
+            </fieldset>
+            <!--This is for the mid part of the form-->
+            <fieldset id="mid">
+                <!--First Name-->
+                <label for="fname" class="font">*First Name</label>
+                <input type="text" id="fname" name="fname" class="fields" placeholder="Enter First Name" required> <br> <br>
+                <!--Last Name-->
+                <label for="lname" class="font">*Last Name</label>
+                <input type="text" id="lname" name="lname" class="fields" placeholder="Enter Last Name" required><br> <br>
+                <!--Date of Birth-->
+                <label for="DOB" class="font">*Date of Birth</label>
+                <!--Different options for day of date-->
+                <select id="DOB" name="DOB" required>
+                    <option value="Date">Date</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <!--Different options for month of date-->
+                <select id="DOB1" name="DOB1" required>
+                    <option value="Month">Month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <!--Different options for year of date-->
+                <select id="DOB2" name="DOB2" required>
+                    <option value="Year">Year</option>
+                    <option value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option> 
+                </select> <br> <br>
+                <!--Gender Part-->
+                <label for="Gender" class="font">*Gender</label>
+                <!--Male-->
+                <input type="radio" id="Male" name="Gender" value="Male" required>
+                <label for="Male" class="font1">Male</label>
+                <!--Female-->
+                <input type="radio" id="Female" name="Gender" value="Female" required>
+                <label for="Female" class="font1">Female</label> <br> <br>
+                <!--Country Part-->
+                <label for="country" class="font">*Country</label>
+                <!--Different options for the country-->
+                <select id="country" name="country" required>
+                    <option value="Country">Country</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Chili">Chili</option>
+                    <option value="China">China</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="France">France</option>
+                    <option value="Finland">Finland</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="India">India</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Libya">Libya</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="North Korea">North Korea</option>
+                    <option value="Palau">Palau</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States of America">United States of America</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value=" Zimbabwe">Zimbabwe</option>
+                </select> <br> <br>
+                <!--Email Part-->
+                <label for="email" class="font">*E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Enter E-mail" required> <br> <br>
+                <!--Phone Part-->
+                <label for="phone" class="font">*Phone</label>
+                <input type="phone" id="phone" name="phone" placeholder="(xxx)-(xxx)-(xxxx)" required><br> <br>
+                <!--Password Part-->
+                <form>
+                    <label for="pwd" class="font">*Password</label>
+                    <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters and one special character" required><br>                    <br>
+
+                </form>
+
+
+
+
+
+                <!--Confirm Password Part-->
+                <label for="cpwd" class="font">*Confirm Password</label>
+                <input type="password" id="cpwd" name="cpwd" required> <br> <br>
+                <input type="checkbox" id="cbox" name="cbox" value="cbox" class="font2" required>
+                <!--Agree all terms part-->
+                <label for="cbox" class="font1">I Agree to the Terms of use</label>
+            </fieldset>
+            <!--Submit and Cancel buttons part-->
+            <fieldset class="head">
+                <input type="submit" id="font3" value="Submit Query" data-inline="true" onclick="point1(); point2(); point3(); point4(); point5(); point6(); point7();">
+                <input type="reset" id="font4" value="Cancel" data-inline="true" style="vertical-align:-10%;">
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
+
+</html>
