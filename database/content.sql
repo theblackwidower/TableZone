@@ -58,8 +58,13 @@ INSERT INTO `product` (`item_id`, `item_name`, `item_price`, `item_image`, `item
       (49, 'Sorry!', 85.00, './img/Sorry!.jpg', '2020-03-28 11:08:57'),
       (50, 'The Game Of Life', 35.00, './img/TheGameOfLife.jpg', '2020-03-28 11:08:57');
 
+# valid user_types: 'c' is customer
+#                   'a' is admin
+#                   ...more if we need it
+
 CREATE TABLE `user` (
         `user_id` int(11) AUTO_INCREMENT PRIMARY KEY,
+        `user_type` char(1) DEFAULT 'c',
         `first_name` varchar(100) NOT NULL,
         `last_name` varchar(100) NOT NULL,
         `register_date` datetime DEFAULT NULL
