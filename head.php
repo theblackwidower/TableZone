@@ -44,9 +44,9 @@
                 <a href="#">clubs</a>
             </div>
         </div>
-        <a class="a1" href="https://www.manticgames.com/shop/">EVENTS</a>
-        <a class="a1" href="https://www.manticgames.com/shop/">NEWS</a>
-        <a class="a1" href="https://www.manticgames.com/shop/">STOCKISTS</a>
+<!--        <a class="a1" href="https://www.manticgames.com/shop/">EVENTS</a>-->
+<!--        <a class="a1" href="https://www.manticgames.com/shop/">NEWS</a>-->
+<!--        <a class="a1" href="https://www.manticgames.com/shop/">STOCKISTS</a>-->
 
         <div class="search">
             <input class="In" type="text" placeholder="search for a product..." name="q">

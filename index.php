@@ -42,9 +42,9 @@
                 <a href="#">clubs</a>
             </div>
         </div>
-        <a class="a1" href="https://www.manticgames.com/shop/">EVENTS</a>
-        <a class="a1" href="https://www.manticgames.com/shop/">NEWS</a>
-        <a class="a1" href="https://www.manticgames.com/shop/">STOCKISTS</a>
+<!--        <a class="a1" href="https://www.manticgames.com/shop/">EVENTS</a>-->
+<!--        <a class="a1" href="https://www.manticgames.com/shop/">NEWS</a>-->
+<!--        <a class="a1" href="https://www.manticgames.com/shop/">STOCKISTS</a>-->
 
 
         <div class="search">
@@ -62,14 +62,10 @@
 
 <div class="buttons">
     <a class="button" href="">New Releases</a>
-    <a class="button" href="">Mantic Direct</a>
     <a class="button" href="">Digital Products</a>
     <a class="button" href="">Events Tickets</a>
-    <a class="button" href="">Mantic Points</a>
     <a class="button" href="">Painting & Modelling</a>
     <a class="button" href="">Novels & Short Stories</a>
-    <a class="button" href="">French</a>
-    <a class="button" href="">German </a>
 </div>
 
 
