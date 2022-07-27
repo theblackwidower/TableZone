@@ -1,14 +1,13 @@
 <?php
-require 'header.php';
-
-
+require_once '../functions.php';
 $db = new DBcontroller();
-
 $stmt = mysqli_prepare($db->con, "SELECT * FROM product WHERE item_id = ?;");
 mysqli_stmt_bind_param($stmt, 'i', $_GET['id']);
 mysqli_stmt_execute($stmt);
 $data = mysqli_stmt_get_result($stmt);
 $product = mysqli_fetch_row($data);
+$pagename = "Product Details: ".$product[1];
+require 'header.php';
 
 echo "<img class=\"view_image\" src=\"../".$product[3]."\" />";
 echo "<div class=\"product_info\">";

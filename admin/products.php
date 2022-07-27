@@ -1,7 +1,7 @@
 <?php
+$pagename = "Product Listing";
 require 'header.php';
 $db = new DBcontroller();
-
 $stmt = mysqli_prepare($db->con, "SELECT * FROM product;");
 mysqli_stmt_execute($stmt);
 $data = mysqli_stmt_get_result($stmt);
