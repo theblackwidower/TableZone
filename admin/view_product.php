@@ -1,4 +1,11 @@
 <?php
+if(!isset($_GET['id']))
+{
+    ob_clean();
+    header("Location: products.php");
+    //close php document
+    exit;
+}
 require_once '../functions.php';
 $db = new DBcontroller();
 $stmt = mysqli_prepare($db->con, "SELECT * FROM product WHERE item_id = ?;");
@@ -31,6 +38,8 @@ echo "</span>";
 echo "<span class=\"data\">";
 echo $product[4];
 echo "</span><br />";
+
+echo "<a href=\"remove_product.php?id=".$product[0]."\">Remove Product</a>";
 
 echo "</div>";
 

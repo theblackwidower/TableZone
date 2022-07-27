@@ -64,7 +64,7 @@ h1, h2, h3 {
     width: 5em;
     font-weight: bold;
 }
-form {
+form, .buttons {
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
