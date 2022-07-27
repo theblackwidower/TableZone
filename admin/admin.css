@@ -1,0 +1,60 @@
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+
+.main, .head{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70em;
+}
+
+.main, .content {
+}
+
+.sidebar, .content {
+    border: black 1px solid;
+    border-radius: 2em;
+    padding: .5em;
+    display: inline-block;
+    vertical-align: top;
+}
+.sidebar {
+    height: 100%;
+    width: 15em;
+    border-right-style: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -2.5em;
+}
+.content {
+    width: 55em;
+    background-color: white;
+}
+.content table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumbnail {
+    width: 5em;
+}
+
+/***************
+** REST OF IT **
+***************/
+
+
+.view_image {
+    display: inline-block;
+    width: 30em;
+}
+.product_info {
+    vertical-align: top;
+    display: inline-block;
+    width: available;
+}
+.key {
+    display: inline-block;
+    width: 5em;
+    font-weight: bold;
+}
