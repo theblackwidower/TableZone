@@ -2,14 +2,8 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 
-CREATE TABLE `cart` (
-    `cart_id` int(11) NOT NULL,
-    `user_id` int(11) NOT NULL,
-    `item_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 CREATE TABLE `product` (
-    `item_id` int(11) NOT NULL,
+    `item_id` int(11) AUTO_INCREMENT PRIMARY KEY,
     `item_name` varchar(255) NOT NULL,
     `item_price` double(10,2) NOT NULL,
     `item_image` varchar(255) NOT NULL,
@@ -64,15 +58,20 @@ INSERT INTO `product` (`item_id`, `item_name`, `item_price`, `item_image`, `item
       (49, 'Sorry!', 85.00, './img/Sorry!.jpg', '2020-03-28 11:08:57'),
       (50, 'The Game Of Life', 35.00, './img/TheGameOfLife.jpg', '2020-03-28 11:08:57');
 
-
 CREATE TABLE `user` (
-        `user_id` int(11) NOT NULL,
+        `user_id` int(11) AUTO_INCREMENT PRIMARY KEY,
         `first_name` varchar(100) NOT NULL,
         `last_name` varchar(100) NOT NULL,
         `register_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
+CREATE TABLE `cart` (
+        `cart_id` int(11) AUTO_INCREMENT PRIMARY KEY,
+        `user_id` int(11) NOT NULL,
+        `item_id` int(11) NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES user(user_id),
+        FOREIGN KEY (item_id) REFERENCES product(item_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `register_date`) VALUES
        (1, 'Rohan', 'Meruliya', '2022-06-28 13:07:17'),
@@ -82,25 +81,11 @@ INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `register_date`) VALUE
 CREATE TABLE `wishlist` (
         `cart_id` int(11) NOT NULL,
         `user_id` int(11) NOT NULL,
-        `item_id` int(11) NOT NULL
+        `item_id` int(11) NOT NULL,
+        FOREIGN KEY (cart_id) REFERENCES cart(cart_id),
+        FOREIGN KEY (user_id) REFERENCES user(user_id),
+        FOREIGN KEY (item_id) REFERENCES product(item_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-ALTER TABLE `cart`
-    ADD PRIMARY KEY (`cart_id`);
-
-ALTER TABLE `product`
-    ADD PRIMARY KEY (`item_id`);
-
-ALTER TABLE `user`
-    ADD PRIMARY KEY (`user_id`);
-
-ALTER TABLE `cart`
-    MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
-
-ALTER TABLE `product`
-    MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
-ALTER TABLE `user`
-    MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
