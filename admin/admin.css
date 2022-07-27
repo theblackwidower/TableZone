@@ -2,6 +2,10 @@ body {
     font-family: "Noto Sans", sans-serif;
 }
 
+h1, h2, h3 {
+    text-align: center;
+}
+
 .main, .head{
     margin-left: auto;
     margin-right: auto;
@@ -14,7 +18,7 @@ body {
 .sidebar, .content {
     border: black 1px solid;
     border-radius: 2em;
-    padding: .5em;
+    padding: .75em;
     display: inline-block;
     vertical-align: top;
 }
@@ -24,7 +28,10 @@ body {
     border-right-style: none;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    margin-right: -2.5em;
+    margin-right: -3.5em;
+}
+.sidebar a {
+    display: block;
 }
 .content {
     width: 55em;
@@ -43,7 +50,6 @@ body {
 ** REST OF IT **
 ***************/
 
-
 .view_image {
     display: inline-block;
     width: 30em;
@@ -57,4 +63,18 @@ body {
     display: inline-block;
     width: 5em;
     font-weight: bold;
+}
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+label {
+    display: inline-block;
+    font-weight: bold;
+    width: 8em;
+}
+label::after {
+    content: ":";
 }

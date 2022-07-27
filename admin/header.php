@@ -16,5 +16,10 @@ require_once '../functions.php';
             ?>
         </h1></div>
     <div class="main">
-        <div class="sidebar"><a href="products.php">Products</a></div>
+        <div class="sidebar">
+            <a href="../index.php">Home</a>
+            <a href="index.php">Admin home</a>
+            <a href="products.php">Products</a>
+            <a href="new_product.php">Add Product</a>
+        </div>
         <div class="content">
