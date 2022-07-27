@@ -1,114 +1,101 @@
 <?php
 include('head.php');
-?>
-<?php
-require('functions.php');
-?>
-<?php
 $db = new DBcontroller();
 $product = new product($db);
-$item_id = $_GET['item_id']?? 1;
-foreach($product->getData() as $item):
-if($item['item_id'] == $item_id):
+$Cart = new cart($db);
 ?>
-    <section id="product" class="py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-
-                        <img src="<?php echo $item['item_image'] ?? "./img/chess.jpg"?>"  alt="product" class="img-fluid">
-                        <div class="form-row pt-4 font-size-16">
-                            <div class="col">
-                                <button type="submit" class="btn btn-dark form-control">Proceed to Buy</button>
-                            </div>
-                            <div class="col">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 py-5">
-                        <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
-                        <div class="d-flex">
-                            <div class="rating text-warning font-size-12">
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star-o"></i></span>
-                            </div>
-                            <a href="#" class="px-2 font-rale font-size-14">20,534 ratings | 1000+ answered questions</a>
-                        </div>
-                        <hr class="m-0">
-
-                        <table class="my-3">
-                            <tr class="font-rale font-size-14">
-                                <td>M.R.P:</td>
-                                <td><strike>$162.00</strike></td>
-                            </tr>
-                            <tr class="font-rale font-size-14">
-                                <td>Deal Price:</td>
-                                <td class="font-size-20 text-danger">$<span><?php echo $item['item_price'] ?? 0; ?></span><small class="text-dark font-size-12">&nbsp;&nbsp;Inclusive of all taxes</small></td>
-                            </tr>
-                            <tr class="font-rale font-size-14">
-                                <td>You Save:</td>
-                                <td><span class="font-size-16 text-danger">$152.00</span></td>
-                            </tr>
-                        </table>
-                        <div id="policy">
-                            <div class="d-flex">
-                                <div class="return text-center mr-5">
-                                    <div class="font-size-20 my-2 color-second">
-                                        <span class="fa fa-retweet border p-3 rounded-pill"></span>
-                                    </div>
-                                    <a href="#" class="font-rale font-size-12">10 Days <br> Replacement</a>
-                                </div>
-
-                                <div class="return text-center mr-5">
-                                    <div class="font-size-20 my-2 color-second">
-                                        <span class="fa fa-check border p-3 rounded-pill"></span>
-                                    </div>
-                                    <a href="#" class="font-rale font-size-12">1 Year <br>Warranty</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <div id="order-details" class="font-rale d-flex flex-column text-dark">
-                            <small>Delivery by : Mar 29  - Apr 1</small>
-                            <small>Sold by <a href="#">TableZone </a>(4.5 out of 5 | 18,198 ratings)</small>
-                            <small><i class="fas fa-map-marker-alt color-primary"></i>&nbsp;&nbsp;Deliver to Customer - N9B 2M9</small>
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col-6">
-                                <div class="qty d-flex">
-                                    <h6 class="font-baloo">Qty</h6>
-                                    <div class="px-4 d-flex font-rale">
-                                        <button class="qty-up border bg-light" data-id="pro1"><i class="fa fa-angle-up"></i></button>
-                                        <input type="text" data-id="pro1" class="qty_input border px-2 w-50 bg-light" disabled value="1" placeholder="1">
-                                        <button data-id="pro1" class="qty-down border bg-light"><i class="fa fa-angle-down"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="col-12">
-                        <h6 class="font-rubik">Product Description</h6>
-                        <hr>
-                        <p class="font-rale font-size-14">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat inventore vero numquam error est ipsa, consequuntur temporibus debitis nobis sit, delectus officia ducimus dolorum sed corrupti. Sapiente optio sunt provident, accusantium eligendi eius reiciendis animi? Laboriosam, optio qui? Numquam, quo fuga. Maiores minus, accusantium velit numquam a aliquam vitae vel?</p>
-                        <p class="font-rale font-size-14">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat inventore vero numquam error est ipsa, consequuntur temporibus debitis nobis sit, delectus officia ducimus dolorum sed corrupti. Sapiente optio sunt provident, accusantium eligendi eius reiciendis animi? Laboriosam, optio qui? Numquam, quo fuga. Maiores minus, accusantium velit numquam a aliquam vitae vel?</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
 
 <?php
-endif;
-endforeach;
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['delete'])) {
+        $deletedrecord = $Cart->deleteitem($_POST['item_id']);
+    }
+}
 ?>
+
+<section id="cart" class="py-3 mb-5">
+    <div class="container-fluid w-75">
+        <h5 class="font-size-20">Shopping Cart</h5>
+
+        <!--  shopping cart items   -->
+        <div class="row">
+            <div class="col-sm-9">
+                <?php
+                $cart = [];
+                $subTotal = [];
+                foreach ($product->getData('cart') as $item) :
+                    $cart = $product->getproduct($item['item_id']);
+                    $subtotal[] = array_map(function($item) {
+                        ?>
+                        <div class="row border-top py-3 mt-3">
+                            <div class="col-sm-2">
+                                <img src="<?php echo $item['item_image'] ?? "./img/uno.png" ?>" style="height: 120px;" alt="cart1" class="img-fluid">
+                            </div>
+                            <div class="col-sm-8">
+                                <h5 class="font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
+                                <div class="d-flex">
+                                    <div class="rating text-warning font-size-12">
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star-o"></i></span>
+                                    </div>
+                                    <a href="#" class="px-2 font-rale font-size-14">20,534 ratings</a>
+                                </div>
+
+
+                                <div class="qty d-flex pt-2">
+                                    <div class="d-flex font-rale w-25">
+                                        <script src="index.js"></script>
+                                        <button class="qty-up border bg-light" data-id="<?php echo $item['item_id'] ?? '0'; ?>"><i class="fa fa-angle-up"></i></button>
+                                        <input type="text" data-id="<?php echo $item['item_id'] ?? '0'; ?>" class="qty_input border px-2 w-100 bg-light" disabled value="1" placeholder="1">
+                                        <button data-id="<?php echo $item['item_id'] ?? '0'; ?>" class="qty-down border bg-light"><i class="fa fa-angle-down"></i></button>
+                                    </div>
+
+                                    <form method="post">
+                                        <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
+                                        <button type="submit" name="delete" class="btn text-danger px-3 border-right">Delete</button>
+                                    </form>
+
+                                    <form method="post">
+                                        <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
+                                        <button type="submit" name="wishlist" class="btn text-danger">Save for Later</button>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-2 text-right">
+                                <div class="font-size-20 text-danger">
+                                    $<span class="product_price" data-id=""</span><?php echo $item['item_price'] ?? 0; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        return $item['item_price'];
+                    },$cart);
+                endforeach;
+                ?>
+            </div>
+            <div class="col-sm-3">
+                <div class="sub-total border text-center mt-2">
+                    <h6 class="font-size-12 font-rale text-success py-3"><i class="fa fa-check"></i> Your order is eligible for FREE Delivery.</h6>
+                    <div class="border-top py-4">
+                        <h5 class="font-size-20">Subtotal (<?php echo isset($subtotal) ? count($subtotal):0; ?> item) :&nbsp; <span class="text-danger">$<span class="text-danger" id="deal-price"><?php echo isset($subtotal) ? $Cart->getSum($subtotal) : 0; ?></span></span> </h5>
+                        <button type="submit" class="btn btn-warning mt-3">Proceed to Buy</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<?php
+include('footer.php') 
+?>
+
+

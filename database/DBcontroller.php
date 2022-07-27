@@ -5,7 +5,7 @@ class DBcontroller
     protected $host = "localhost";
     protected $user = "root";
     protected $password = "";
-    protected $database = "tablezone";
+    protected $database = "TableZone";
 
     public $con = null;
 

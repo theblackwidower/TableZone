@@ -17,7 +17,9 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <div class="header">
-    <h1 class="title1">TableZones</h1>
+    <a href="index.php" class="text-light">
+        <h1 class="title1">TableZones</h1>
+    </a>
     <div class="navigation">
         <div class="dropdown">
             <button class="dropbtn">ALL PRODUCTS</button>
@@ -42,15 +44,18 @@
                 <a href="#">clubs</a>
             </div>
         </div>
-<!--        <a class="a1" href="https://www.manticgames.com/shop/">EVENTS</a>-->
-<!--        <a class="a1" href="https://www.manticgames.com/shop/">NEWS</a>-->
-<!--        <a class="a1" href="https://www.manticgames.com/shop/">STOCKISTS</a>-->
+        <a class="a1" href="https://www.manticgames.com/shop/">EVENTS</a>
+        <a class="a1" href="https://www.manticgames.com/shop/">NEWS</a>
+        <a class="a1" href="https://www.manticgames.com/shop/">STOCKISTS</a>
 
 
         <div class="search">
             <input class="In" type="text" placeholder="search for a product..." name="q">
             <button class="btn" type="submit"><i class = "fa fa-search"></i></button>
-            <button><i class = "fa fa-shopping-cart"></i></button>
+            <a href="cart.php" class="font-size-14 font-rale">
+                <span class = "font-size-20 px-2"><i class = "fa fa-shopping-cart"></i></span>
+                <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
+            </a>
             <button><i class = "fa fa-heart"></i></button>
         </div>
 
@@ -62,10 +67,14 @@
 
 <div class="buttons">
     <a class="button" href="">New Releases</a>
+    <a class="button" href="">Mantic Direct</a>
     <a class="button" href="">Digital Products</a>
     <a class="button" href="">Events Tickets</a>
+    <a class="button" href="">Mantic Points</a>
     <a class="button" href="">Painting & Modelling</a>
     <a class="button" href="">Novels & Short Stories</a>
+    <a class="button" href="">French</a>
+    <a class="button" href="">German </a>
 </div>
 
 
@@ -87,11 +96,7 @@
 
 <?php
 include('featured.php')
-
-
 ?>
-
-
 </div>
 
 </body>

@@ -9,16 +9,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title> My Homepage</title>
-
+    <?php
+    require('functions.php');
+    ?>
 </head>
 
 <body>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <div class="head">
+    <a href="index.php" class ="text-dark">
     <h1 class="title1">TableZones</h1>
+    </a>
     <div class="navigation">
         <div class="dropdown">
             <button class="dropbtn">ALL PRODUCTS</button>
@@ -44,13 +47,19 @@
                 <a href="#">clubs</a>
             </div>
         </div>
-<!--        <a class="a1" href="https://www.manticgames.com/shop/">EVENTS</a>-->
-<!--        <a class="a1" href="https://www.manticgames.com/shop/">NEWS</a>-->
-<!--        <a class="a1" href="https://www.manticgames.com/shop/">STOCKISTS</a>-->
+        <a class="a1" href="https://www.manticgames.com/shop/">EVENTS</a>
+        <a class="a1" href="https://www.manticgames.com/shop/">NEWS</a>
+        <a class="a1" href="https://www.manticgames.com/shop/">STOCKISTS</a>
 
         <div class="search">
             <input class="In" type="text" placeholder="search for a product..." name="q">
             <button class="btn" type="submit"><i class = "fa fa-search"></i></button>
-            <button><i class = "fa fa-shopping-cart"></i></button>
+            <a href="cart.php" class="font-size-14 font-rale">
+            <span class = "font-size-20 px-2"><i class = "fa fa-shopping-cart"></i></span>
+            <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
+            </a>
             <button><i class = "fa fa-heart"></i></button>
         </div>
+
+</body>
+</html>
