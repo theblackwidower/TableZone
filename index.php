@@ -9,8 +9,6 @@
     <title> My Homepage</title>
     <?php
     require('functions.php');
-    $db = new DBcontroller();
-    $product = new product($db);
     ?>
 </head>
 
@@ -52,8 +50,7 @@
         <div class="search">
             <input class="In" type="text" placeholder="search for a product..." name="q">
             <button class="btn" type="submit"><i class = "fa fa-search"></i></button>
-            <span class = "font-size-20 px-2"><i class = "fa fa-shopping-cart"></i></span>
-            <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
+            <button><i class = "fa fa-shopping-cart"></i></button>
             <button><i class = "fa fa-heart"></i></button>
         </div>
 

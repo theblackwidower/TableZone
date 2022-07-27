@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title> My Homepage</title>
-    <?php
 
-    require('functions.php');
-    ?>
 </head>
 
 <body>
@@ -54,7 +51,6 @@
         <div class="search">
             <input class="In" type="text" placeholder="search for a product..." name="q">
             <button class="btn" type="submit"><i class = "fa fa-search"></i></button>
-            <span class = "font-size-20 px-2"><i class = "fa fa-shopping-cart"></i></span>
-            <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
+            <button><i class = "fa fa-shopping-cart"></i></button>
             <button><i class = "fa fa-heart"></i></button>
         </div>
