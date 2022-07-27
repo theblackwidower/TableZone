@@ -20,8 +20,8 @@ foreach ($products as $thisProduct)
     echo $thisProduct[1];
     echo "</a>";
     echo "</td>";
-    echo "<td>";
-    echo $thisProduct[2];
+    echo "<td>$";
+    echo number_format($thisProduct[2],2);
     echo "</td>";
     echo "<td>";
     echo $thisProduct[4];

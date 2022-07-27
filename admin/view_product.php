@@ -21,8 +21,8 @@ echo "</span><br />";
 echo "<span class=\"key\">";
 echo "Price:";
 echo "</span>";
-echo "<span class=\"data\">";
-echo $product[2];
+echo "<span class=\"data\">$";
+echo number_format($product[2], 2);
 echo "</span><br />";
 
 echo "<span class=\"key\">";
