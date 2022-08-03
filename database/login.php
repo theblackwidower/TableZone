@@ -50,8 +50,8 @@ class login
         $data = mysqli_fetch_assoc($res);
         if($row>0)
         {
-            $_SESSION['username'] = $username;
             if(password_verify($password,$data['password'])) {
+                $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $data['user_id'];
                 echo "<script>window.open('index.php','_self')</script>";
             }
