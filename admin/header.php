@@ -2,10 +2,10 @@
 require_once '../functions.php';
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en-CA">
 <head>
     <title>TableZone admin</title>
-    <link rel="stylesheet" href="admin.css"></link>
+    <link rel="stylesheet" href="admin.css"/>
 </head>
 <body>
     <div class="head">
