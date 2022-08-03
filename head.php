@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -75,5 +74,4 @@
             }
             ?>
         </div>
-
-    </div>
+</div>

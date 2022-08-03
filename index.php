@@ -91,21 +91,7 @@
 </div>
 
 
-<!--<section>
-    <h1>Our Collection</h1>
 
-    <figure>
-        <a href="https://www.manticgames.com/games/kings-of-war/"><img src="../project/img/kow.webp" alt="kings of war"></a>
-        <a href="https://www.manticgames.com/games/armada/featured-products-armada/"><img src="../project/img/Armada.webp" alt="Armada"></a>
-        <a href="https://www.manticgames.com/games/deadzone/featured-products-deadzone/"> <img src="../project/img/dzzc.webp" alt="Dead Zone"></a>
-        <a href="https://www.manticgames.com/games/firefight/"><img src="../project/img/Firefight-Logo.png" alt="Firefight"></a>
-        <a href="https://www.manticgames.com/games/star-saga/"><img src="../project/img/starsaga.webp" alt="starsaga"></a>
-        <a href="https://www.manticgames.com/games/league-of-infamy/"><img src="../project/img/loi.png" alt="LeageOfInfamy"></a>
-        <a href="https://www.manticgames.com/games/hellboy/"><img src="../project/img/hellboy.webp" alt="HellBoy"></a>
-        <a href="https://www.manticgames.com/games/dungeon-saga/"><img src="../project/img/dungeonsaga.webp" alt="DungeonSaga"></a>
-        <a href="https://www.manticgames.com/games/warpath/featured-products-warpath/"><img src="../project/img/Warpath.jpg" alt="WarPath"></a>
-    </figure>
-</section>-->
 
 <?php
 include('featured.php')

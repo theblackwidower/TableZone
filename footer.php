@@ -1,5 +1,4 @@
-
-    <script src="index.js"></script>
+<script src="index.js"></script>
 
 <div class="col-md-12 footer">
 	<div class="container">
