@@ -1,5 +1,6 @@
 <?php
 include('head.php');
+session_start();
 ?>
 <?php
 $db = new DBcontroller();

@@ -67,6 +67,9 @@ CREATE TABLE `user` (
         `user_type` char(1) DEFAULT 'c',
         `first_name` varchar(100) NOT NULL,
         `last_name` varchar(100) NOT NULL,
+        `email` varchar(100) NOT NULL,
+        `username`  varchar(100) NOT NULL,
+        `password` varchar(100) NOT NULL,
         `register_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -77,10 +80,6 @@ CREATE TABLE `cart` (
         FOREIGN KEY (user_id) REFERENCES user(user_id),
         FOREIGN KEY (item_id) REFERENCES product(item_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `register_date`) VALUES
-       (1, 'Rohan', 'Meruliya', '2022-06-28 13:07:17'),
-       (2, 'Jil', 'Dhami', '2022-06-28 28:07:17');
 
 
 CREATE TABLE `wishlist` (

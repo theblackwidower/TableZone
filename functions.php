@@ -6,6 +6,7 @@ require('database/product.php');
 
 require('database/cart.php');
 
+require('database/login.php');
 
 $db = new DBcontroller();
 

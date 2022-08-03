@@ -24,7 +24,7 @@ $login = new login($db);
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 
-    $log = $login->register($_POST['name'], $_POST['email'], $_POST['username'], $_POST['password']);
+    $log = $login->register($_POST['fname'],$_POST['lname'], $_POST['email'], $_POST['username'], $_POST['password']);
 
 }
 ?>
@@ -39,8 +39,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                 </div>
                 <div class = "card-body">
 
-                    <label for="name" class="font">*Name</label>
-                    <input type="text" id="name" name="name" class="fields" placeholder="Enter Name" required><br> <br>
+                    <label for="name" class="font">*First Name</label>
+                    <input type="text" id="fname" name="fname" class="fields" placeholder="Enter Name" required><br> <br>
+                    <label for="name" class="font">*Last Name</label>
+                    <input type="text" id="lname" name="lname" class="fields" placeholder="Enter Name" required><br> <br>
                     <label for="email" class="font">*E-mail</label>
                     <input type="email" id="email" name="email" placeholder="Enter E-mail" required> <br> <br>
                     <label for="username" class="font" >*Username</label>
