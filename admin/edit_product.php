@@ -1,5 +1,5 @@
 <?php
-$pagename = "Add Product";
+$pagename = "Edit Product";
 require 'header.php';
 function display_text_box($id, $label, $value)
 {
