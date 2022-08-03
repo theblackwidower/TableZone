@@ -39,6 +39,7 @@ echo "<span class=\"data\">";
 echo $product[4];
 echo "</span><br />";
 
+echo "<a href=\"edit_product.php?id=".$product[0]."\">Edit Product</a> ";
 echo "<a href=\"remove_product.php?id=".$product[0]."\">Remove Product</a>";
 
 echo "</div>";

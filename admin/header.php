@@ -21,5 +21,6 @@ require_once 'security.php';
             <a href="index.php">Admin home</a>
             <a href="products.php">Products</a>
             <a href="new_product.php">Add Product</a>
+            <a href="users.php">User Management</a>
         </div>
         <div class="content">
