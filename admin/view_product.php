@@ -6,7 +6,7 @@ if(!isset($_GET['id']))
     //close php document
     exit;
 }
-require_once '../functions.php';
+require_once 'security.php';
 $db = new DBcontroller();
 $stmt = mysqli_prepare($db->con, "SELECT * FROM product WHERE item_id = ?;");
 mysqli_stmt_bind_param($stmt, 'i', $_GET['id']);
