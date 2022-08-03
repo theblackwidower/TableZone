@@ -16,7 +16,7 @@ INSERT INTO `product` (`item_id`, `item_name`, `item_price`, `item_image`, `item
       (3, 'Checkers', 55.00, './img/checkers.jpg', '2020-03-28 11:08:57'),
       (4, 'Coup', 40.00, './img/coup.jpg', '2020-03-28 11:08:57'),
       (5, 'Reversi', 30.00, './img/reversi.jpg', '2020-03-28 11:08:57'),
-      (6, 'Arkham Horror', 35.00, './img/arkham.jpg', '2020-03-28 11:08:57'),
+      (6, 'Arkham Horror', 35.00, './img/first.jpg', '2020-03-28 11:08:57'),
       (7, 'Boggle', 65.00, './img/Boggle.jpg', '2020-03-28 11:08:57'),
       (8, 'Carcassonne', 65.00, './img/Carcassonne.jpg', '2020-03-28 11:08:57'),
       (9, 'ConnectFour', 100.00, './img/ConnectFour.jpg', '2020-03-28 11:08:57'),
@@ -53,7 +53,7 @@ INSERT INTO `product` (`item_id`, `item_name`, `item_price`, `item_image`, `item
       (43, 'Risk', 20.00, './img/Risk.jpeg', '2020-03-28 11:08:57'),
       (44, 'Scrabble', 30.00, './img/Scrabble.jpeg', '2020-03-28 11:08:57'),
       (46, 'Stratego', 60.00, './img/Stratego.jpeg', '2020-03-28 11:08:57'),
-      (47, 'The Game Of Life', 80.00, './img/The Game Of Life.jpeg', '2020-03-28 11:08:57'),
+      (47, 'The Game Of Life', 80.00, './img/TheGameOfLife.jpeg', '2020-03-28 11:08:57'),
       (48, 'PowerGrid', 75.00, './img/PowerGrid.jpg', '2020-03-28 11:08:57'),
       (49, 'Sorry!', 85.00, './img/Sorry!.jpg', '2020-03-28 11:08:57'),
       (50, 'The Game Of Life', 35.00, './img/TheGameOfLife.jpg', '2020-03-28 11:08:57');

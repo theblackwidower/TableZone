@@ -116,3 +116,5 @@ include('featured.php')
 include('footer.php');
 
 ?>
+
+</body>
