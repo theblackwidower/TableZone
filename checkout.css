@@ -1,0 +1,158 @@
+/*
+Checkout page
+*/
+
+#DOB {
+    margin-left: 7%;
+}
+
+#DOB1 {
+    margin-left: 1%;
+}
+
+#DOB2 {
+    margin-left: 1%;
+}
+
+#Male {
+    margin-left: 17.5%;
+}
+
+#country {
+    margin-left: 17%;
+}
+
+#email {
+    margin-left: 19%;
+}
+
+#phone {
+    margin-left: 20%;
+}
+
+#pwd {
+    margin-left: 15%;
+}
+
+#cpwd {
+    margin-left: 1%;
+}
+
+#cbox {
+    margin-left: 38%;
+}
+
+.fields {
+    margin-left: 10%;
+}
+
+#overall {
+    margin-left: 30%;
+    margin-right: 38%;
+    margin-bottom: 80%;
+}
+
+.head {
+    background-color: darkorange;
+    border-color: darkorange;
+}
+
+.font1 {
+    color: yellow;
+}
+
+.font {
+    color: yellow;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+#mid {
+    background-color: #282828;
+}
+
+.font2 {
+    margin-left: 7%;
+}
+
+#font3 {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 35%;
+    background-color: lightgreen;
+    float: left;
+    color: white;
+    margin-bottom: -7.2%;
+    border: 1px solid lightgreen;
+}
+
+#font4 {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 80%;
+    background-color: red;
+    border: 1px solid red;
+    margin-top: -20%;
+    color: white;
+}
+
+
+/*For Password*/
+
+input {
+    box-sizing: border-box;
+}
+
+
+/* Style the container for inputs */
+
+.container {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+
+/* The message box is shown when the user clicks on the password field */
+
+#message {
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+
+/* Add a green text color and a checkmark when the requirements are right */
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "=>";
+}
