@@ -16,9 +16,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 <section class ="featuredgame">
     <h1>Featured Games</h1>
     <hr>
-    <div class="featured">
+<div class="container">
+    <div class="row">
         <?php foreach ($product_shuffle as $item) {?>
-        <div class="container py-5">
+        <div class="col-md-3 product">
             <a href = "<?php printf('%s?item_id=%s','product.php',$item['item_id'])?>"><img src="<?php echo $item['item_image']??"../project/img/first.jpg"?>" style="height:190px;width:190px;"></a>
             <div class ="text-center">
             <h6 class="py-2"><?php echo $item['item_name']?></h6>
@@ -50,7 +51,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         </div>
         <?php } ?>
     </div>
-
+</div>
 </section>
 
 

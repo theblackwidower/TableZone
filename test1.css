@@ -16,9 +16,30 @@ body {
     padding-top: 10px;
 }
 
+.title1{
+    color:#4CAF50;
+    font-weight: bolder;
+}
+
+.title1:hover{
+    text-decoration: none;
+    color:#4CAF50;
+}
+
 .navigation {
     padding: 5px;
+    background-color: #333333;
 }
+
+.navigation a i{
+   color:#FFFFFF;
+   text-decoration: none;
+}
+
+.navigation a:hover{
+  text-decoration: none;
+}
+
 
 .dropbtn {
     background-color: #4CAF50;
@@ -133,7 +154,9 @@ body {
     border-radius: 0;
     padding: 10px;
     background-image: "imagetoaya5.jpg";
-    right: 0;
+  margin-top: -5px;
+    color: #FFFFFF;
+    background-color:  #4CAF50;
 }
 
 .icon {
@@ -141,6 +164,12 @@ body {
     font-size: xx-large;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.heart{
+    background-color: #333333;
+    color: #4CAF50;
+    border:0;
 }
 
 h1 {
@@ -178,6 +207,7 @@ figure img{
     border-radius: 25px;
     margin-left: 5px;
     margin-right: 5px;
+    margin-top: 10px;
 }
 .container{
     flex-grow: 1;
@@ -186,3 +216,27 @@ figure img{
     display: flex;
 }
 
+
+.footer{
+    background-color: #333333;
+    color:#FFFFFF;
+    padding:25px 15px;
+}
+.links{
+    list-style: none;
+    padding-left: 0;
+}
+
+.links a{
+    color:#FFFFFF;
+    padding: 5px;
+}
+
+.links a:hover{
+text-decoration: none;
+    }
+
+    .product{
+       margin-top: 20px;
+       margin-bottom: 20px; 
+    }

@@ -125,3 +125,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 endif;
 endforeach;
 ?>
+
+
+<?php
+include('footer.php');
+
+?>
