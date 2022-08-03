@@ -1,5 +1,8 @@
 <?php
-
+if(!isset($_SESSION))
+{
+    session_start();
+}
 $db = new DBcontroller();
 $product = new product($db);;
 $product_shuffle = $product->getData();

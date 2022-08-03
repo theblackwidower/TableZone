@@ -53,10 +53,10 @@ INSERT INTO `product` (`item_id`, `item_name`, `item_price`, `item_image`, `item
       (43, 'Risk', 20.00, './img/Risk.jpeg', '2020-03-28 11:08:57'),
       (44, 'Scrabble', 30.00, './img/Scrabble.jpeg', '2020-03-28 11:08:57'),
       (46, 'Stratego', 60.00, './img/Stratego.jpeg', '2020-03-28 11:08:57'),
-      (47, 'The Game Of Life', 80.00, './img/TheGameOfLife.jpeg', '2020-03-28 11:08:57'),
+      (47, 'The Game Of Life', 80.00, './img/TheGameOfLife.jpg', '2020-03-28 11:08:57'),
       (48, 'PowerGrid', 75.00, './img/PowerGrid.jpg', '2020-03-28 11:08:57'),
       (49, 'Sorry!', 85.00, './img/Sorry!.jpg', '2020-03-28 11:08:57'),
-      (50, 'The Game Of Life', 35.00, './img/TheGameOfLife.jpg', '2020-03-28 11:08:57');
+      (50, 'Pandemic', 35.00, './img/pandemic.jpg', '2020-03-28 11:08:57');
 
 # valid user_types: 'c' is customer
 #                   'a' is admin

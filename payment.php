@@ -147,10 +147,9 @@
         </fieldset>
         <!--Submit and Cancel buttons part-->
         <fieldset class="head">
-            <span type="submit" id="font3" value="" data-inline="true"> <a href="orderconfirm.php">CONFIRM AND PAY</a></span>
-            <input type="reset" id="font4" value="Cancel" data-inline="true" style="vertical-align:-10%;">
+            <a href="orderconfirm.php"><button type='submit' class='btn btn-warning mt-3'> CONFIRM AND PAY</button></a>
         </fieldset>
-    </fieldset>
+        </fieldset>
 </form>
 </body>
 </html>

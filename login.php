@@ -2,7 +2,10 @@
 require('functions.php');
 ?>
 <?php
-session_start();
+if(!isset($_SESSION))
+{
+    session_start();
+}
 $db = new DBcontroller();
 $login = new login($db);
 ?>

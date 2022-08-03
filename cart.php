@@ -1,6 +1,10 @@
 <?php
 include('head.php');
-session_start();
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
+
 $db = new DBcontroller();
 $product = new product($db);
 $Cart = new cart($db);
