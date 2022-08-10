@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     <input type="username" id="username" placeholder="Enter username" name="username" required><br><br>
 
                     <label for="pwd" class="font">*Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters and one special character" required><br>                    <br>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required><br><br>
                 </div>
                 <div class = "card-footer">
                     <input type="submit"  value="Login" name = "submit" class="bg-success text-white" data-inline="true">

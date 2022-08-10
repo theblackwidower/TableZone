@@ -73,6 +73,10 @@ CREATE TABLE `user` (
         `register_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `user` (`user_type`, `first_name`, `last_name`, `email`, `username`, `password`) VALUES
+                     ('a', 'Admin', 'Account', 'admin@example.com', 'admin',
+                      '$2y$10$ueAfsBzgkB5HNAtMh7Ecq.QqPnZ4gqBh4jcz8VnKd3lhQaZkeCEq6');
+
 CREATE TABLE `cart` (
         `cart_id` int(11) AUTO_INCREMENT PRIMARY KEY,
         `user_id` int(11) NOT NULL,
