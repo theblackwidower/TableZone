@@ -73,8 +73,10 @@ CREATE TABLE `user` (
         `register_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+/*DON'T INCLUDE THIS ACCOUNT IN PRODUCTION*/
 INSERT INTO `user` (`user_type`, `first_name`, `last_name`, `email`, `username`, `password`) VALUES
                      ('a', 'Admin', 'Account', 'admin@example.com', 'admin',
+                      /* password is 'password' */
                       '$2y$10$ueAfsBzgkB5HNAtMh7Ecq.QqPnZ4gqBh4jcz8VnKd3lhQaZkeCEq6');
 
 CREATE TABLE `cart` (
